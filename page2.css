@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    background-color: white;
+}
+
+.b1{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 20;
+    margin-top: 20;
+}
+.b2{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 150;
+    margin-top: 20;
+}
+.b3{
+    position: absolute;
+    font-size: 30px;
+    margin-left:300;
+    margin-top: 20;
+}
+.b4{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 450;
+    margin-top: 20;
+}
+.b5{
+    position: absolute;
+    font-size: 30px;
+    margin-left:650;
+    margin-top: 20;
+}
+.b6{
+    position: absolute;
+    font-size: 30px;
+    margin-left:750;
+    margin-top: 20;
+}
+
+.container{
+    position: absolute;
+    margin-left: 300;
+    margin-top:150 ;
+    width: 800;
+    height: 350;
+    border-style: solid;
+    background-color: wheat;
+}
+
+.Iamges{
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 250px;
+    height: 1000;
+    background-color: aqua;
+}
+.images{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.list{
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 250px;
+    height: 1000;
+}

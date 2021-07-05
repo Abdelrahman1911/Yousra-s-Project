@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Login Form</title>
+<link rel="stylesheet" href="page4.css">
+<link rel="icon" href="square1.jpg">
+</head>
+<body>
+
+
+    <span><a href="page1.html" target="_blank"><button class="b1">Home</button></a></span>
+    <span><a href="page2.html" target="_blank"><button class="b2">Gallery</button></a></span>
+    <span><a href="page3.html" target="_blank"><button class="b3">About</button></a></span>
+    <span><a href="page4.html" target="_self"><button class="b4">Login Form</button></a></span>
+    <span><a href="page5.html" target="_blank"><button class="b5">Quiz</button></a></span>
+    <span><a href="page6.html" target="_blank"><button class="b6">Game</button></a></span>
+
+    <form action="Page.html" onsubmit="return validate()" method="post">
+        <sapn class="sapn">user name</sapn> <input type="text" name="uName"/>
+        <span id="uName">*must be entered*</span><br/><br/>
+        
+        <span class="sapn">first name</span>  <input type="text" name="fName"/>
+        <span id="fName"></span><br/><br/>
+        
+        <span class="sapn"> second name </span><input type="text" name="sName"/>
+        <span id="sName"></span><br/><br/>
+        
+        <span class="sapn">email</span>  <input type="text" name="mail"  />
+        <span id="mail" >*must be entered*</span><br/><br/>
+        
+        <span class="sapn">password </span>  <input type="password" name="password"/>
+        <span id="password" >*must be entered*</span><br/><br/>
+        
+        <span class="sapn">phone number</span>   <input type="text" name="pNumber"/>
+        <span id="pNumber"></span><br/><br/>
+        
+        <input type="submit" value="login" class="login"/>
+    </form>
+
+
+    <script>
+function validate()
+           {
+         var checkUser;
+         var checkPassword;
+         var checkEmail;
+         var checkFirstName;
+         var checkSecondName;
+            var checknumber;
+         var x=document.forms[0].uName.value;
+         var y=document.forms[0].password.value;
+         var z=document.forms[0].mail.value;
+         var a=document.forms[0].fName.value;
+         var b=document.forms[0].sName.value;
+        var c=document.forms[0].pNumber.value; 
+             
+           if(x.length<5 || x.length>7)
+               {
+                   document.getElementById("uName").innerHTML="*must be 5-7 charachters*";
+                   checkUser=false;
+               }
+           else
+               {
+                   document.getElementById("uName").innerHTML="";
+               }
+           
+            if(y.length<7)
+               {
+                   document.getElementById("password").innerHTML="*must be not less than 7 charachters*"
+                   checkPassword=false;
+               }
+           else
+               {
+                   document.getElementById("password").innerHTML="";
+               }
+               
+           if((!(z.includes("."))) || (!(z.includes("@")))) 
+               {
+                   document.getElementById("mail").innerHTML="*invalid mail*";
+                   checkEmail=false;
+               }
+           else
+               {
+                   document.getElementById("mail").innerHTML="";
+               }
+               
+           if((z.substring(z.indexOf("@")+1,z.length)).includes("@"))
+                   {
+                       document.getElementById("mail").innerHTML="*invalid mail*"
+                       checkEmail=false;
+                   }
+              
+            if(a.includes("1") || a.includes("2")|| a.includes("3")|| a.includes("4")|| a.includes("5")|| a.includes("6")|| a.includes("7")|| a.includes("8")||a.includes("9"))
+            {
+                document.getElementById("fName").innerHTML="*must not contain numbers*";
+                checkFirstName=false;
+            }    
+            else
+            {
+                document.getElementById("fName").innerHTML="";
+            }  
+               
+            if(b.includes("1") || b.includes("2")|| b.includes("3")|| b.includes("4")|| b.includes("5")|| b.includes("6")|| b.includes("7")|| b.includes("8")||b.includes("9"))
+            {
+                document.getElementById("sName").innerHTML="*must not contain numbers*";
+                checkSecondName=false;
+            }    
+            else
+            {
+                document.getElementById("fName").innerHTML="";
+            }  
+        
+            if(checkUser==false || checkPassword==false || checkEmail==false)
+                {
+                    return false;
+                }
+               return true; 
+           }
+    </script>
+</body>
+</html>

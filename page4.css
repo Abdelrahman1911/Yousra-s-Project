@@ -1,0 +1,83 @@
+.b1{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 20;
+    margin-top: 20;
+}
+.b2{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 150;
+    margin-top: 20;
+}
+.b3{
+    position: absolute;
+    font-size: 30px;
+    margin-left:300;
+    margin-top: 20;
+}
+.b4{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 450;
+    margin-top: 20;
+}
+.b5{
+    position: absolute;
+    font-size: 30px;
+    margin-left:650;
+    margin-top: 20;
+}
+.b6{
+    position: absolute;
+    font-size: 30px;
+    margin-left:750;
+    margin-top: 20;
+}
+
+
+form{
+    position: absolute;
+    margin-top: 120;
+    margin-left: 300;
+    width: 800;
+    height: 500;
+    border-style: solid;
+    border-color: black;
+    background-color:rgb(18, 158, 168);
+    font-family: inherit ;
+    font-size: 30;
+    display: inline-block;
+}
+
+#uName{
+   font-size: 20;
+   color: maroon;
+}
+#mail{
+   font-size: 20;
+   color: maroon;
+}
+#password{
+   font-size: 20;
+   color: maroon;
+}
+#fName{
+    font-size: 20;
+    color: maroon;
+}
+#sName{
+    font-size: 20;
+    color: maroon;
+}
+
+
+
+.sapn{
+    margin-left: 20;
+}
+
+.login{
+    margin-left: 300;
+    font-size: 30;
+}

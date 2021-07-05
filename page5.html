@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="page5.css">
+        <link rel="icon" href="square1.jpg"> 
+    </head>
+    <body>
+        <span><a href="page1.html" target="_blank"><button class="b1">Home</button></a></span>
+    <span><a href="page2.html" target="_blank"><button class="b2">Gallery</button></a></span>
+    <span><a href="page3.html" target="_blank"><button class="b3">About</button></a></span>
+    <span><a href="page4.html" target="_blank"><button class="b4">Login Form</button></a></span>
+    <span><a href="page5.html" target="_self"><button class="b5">Quiz</button></a></span>
+    <span><a href="page6.html" target="_blank"><button class="b6">Game</button></a></span>
+        <div class="quiz" >
+            <form action="page2.html" method="post" onsubmit="return validate()">
+                <span class="q1">1.Which character in "Sponge Bob square pants" acts like a squirrel?</span>
+                <span class="ans">Answer : </span><input type="text"  class="ans1" id="ans1" /><br/>
+                <span class="q2">2.Which character in "Sponge Bob square pants" acts like a Crab ?  </span>
+                <span class="ans">Answer :</span><input type="text" class="ans2" id="ans2" /><br/>
+                <span class="q3">3.Which character in "Sponge Bob square pants" acts like a sea star ?   </span>
+                <span class="ans">Answer :</span><input type="text"  class="ans3" id="ans3" /><br/>
+                <span class="q4">4.Which character in "Sponge Bob square pants" acts like an evil caharcter ?  </span>
+                <span class="ans">Answer :</span><input type="text" class="ans4" id="ans4" />
+                <input type="submit" value="Submit" class="sub" >
+            </form>
+        </div>
+        <script>
+        function validate(){
+            var ans1;
+            var ans2;
+            var ans3;
+            var ans4;
+            var score=0;
+            var x1="sandy"
+            var x2="mr saltaa";
+            var f1="baseet";
+            var v1="shamshon";
+            ans1=document.getElementById('ans1').value;
+            if(ans1==x1){
+                score=score+25;
+            }
+            ans2=document.getElementById('ans2').value;
+            if(ans2==x2){
+                score=score+25;
+            }
+             ans3=document.getElementById('ans3').value;
+            if(ans3==f1){
+               score=score+25; 
+            }
+            ans4=document.getElementById('ans4').value;
+            if(ans4==v1){
+               score=score+25;  
+            }
+            alert("Your Score = "+score+"%");
+        }
+    </script>
+    
+    
+    
+    </body>
+
+
+
+
+
+
+
+
+
+
+</html>

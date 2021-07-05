@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    background-color: white;
+}
+.b1{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 20;
+    margin-top: 20;
+}
+.b2{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 150;
+    margin-top: 20;
+}
+.b3{
+    position: absolute;
+    font-size: 30px;
+    margin-left:300;
+    margin-top: 20;
+}
+.b4{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 450;
+    margin-top: 20;
+}
+.b5{
+    position: absolute;
+    font-size: 30px;
+    margin-left:650;
+    margin-top: 20;
+}
+.b6{
+    position: absolute;
+    font-size: 30px;
+    margin-left:750;
+    margin-top: 20;
+}
+.quiz{
+    background-color: coral;
+    position: absolute;
+    width: 800px;
+    height:600px;
+    margin-left: 350;
+    margin-top: 100;
+}
+.q1{
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    margin-top: 20px;
+}
+.ans1{
+    
+    width: 500px;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+.ans{
+    
+    font-size: 28px;
+    color: white;
+}
+.q2{
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+}
+.ans2{
+    width: 500px;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+.q3{
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+}
+.ans3{
+    width: 500px;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+.q4{
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+}
+.ans4{
+    width: 500px;
+    margin-left: 30px;
+    margin-top: 120px;
+}
+.sub{
+    position: absolute;
+    margin-top: 150;
+    height: 40;
+    width: 90;
+    margin-left:40;
+    color:white;
+    background-color:red;
+    font-size: 18;
+    border-style: solid;
+     border-radius:12px ;
+    border-color: black;
+}

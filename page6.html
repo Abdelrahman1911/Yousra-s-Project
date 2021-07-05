@@ -1,0 +1,172 @@
+<html>
+<head> 
+<link rel="stylesheet" href="page6.css">
+<link rel="icon" href="square1.jpg"> 
+    <title>Spong Game</title>
+    <script>        
+        var s;
+        var a;
+        var score=0;
+        var timer=0;
+        var t;
+        function init()
+        {
+            a=document.getElementById('a');
+            a.style.position = "absolute";
+            a.style.top = "200px";
+            a.style.left = "600px";
+            s=document.getElementById('sp');
+            s.style.position="absolute";
+            s.style.top="400px";
+            s.style.left="800px";           
+        }
+        function Move(e)
+        {
+            if(e.keyCode==97 && parseInt(s.style.left)>50)
+               {
+                    s.src = "spong.png";
+                    s.style.left=parseInt(s.style.left)-30+"px"; 
+               }
+            else if(e.keyCode==119  && parseInt(s.style.top)>100)
+               {   
+                   s.style.top=parseInt(s.style.top)-30+"px"; 
+               }
+            else if(e.keyCode==115 && parseInt(s.style.top)<parseInt(innerHeight)-300)
+               {
+                    s.style.top=parseInt(s.style.top)+30+"px";      
+               }
+            else if(e.keyCode==100 && parseInt(s.style.left)<parseInt(innerWidth) - 320)
+               { 
+                    s.src = "spong.png";
+                    s.style.left=parseInt(s.style.left)+30+"px"; 
+               }    
+            checkOverlap();
+        }
+        function checkOverlap()
+        {
+            var Rtop = parseInt(s.style.top);
+            var Rleft = parseInt(s.style.left);
+            var Rright = parseInt(s.style.left) + 300;
+            var Rbottom = parseInt(s.style.top) + 180;
+            var TTop = parseInt(a.style.top);
+            var TLeft = parseInt(a.style.left);
+            var TRight = parseInt(a.style.left) + 160;
+            var TBottom = parseInt(a.style.top) + 120;
+            
+            if(Rtop >= TTop && Rtop<= TBottom && 
+              Rleft >= TLeft && Rleft <= TRight)
+                {
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                    changeMyLocation();
+                    
+                }
+            else if(Rtop >= TTop && Rtop <= TBottom && 
+              Rright >= TLeft && Rright <= TRight)
+                {
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                    changeMyLocation();
+                    
+                }
+            else if(Rbottom >= TTop && Rbottom <= TBottom && 
+              Rleft >= TLeft && Rleft <= TRight)
+                {
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                    changeMyLocation();
+                    
+                }
+            else if(Rbottom >= TTop && Rbottom <= TBottom && 
+              Rright >= TLeft && Rright <= TRight)
+                {
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                    changeMyLocation();
+                     
+                }
+            else if(Rbottom >= TTop && Rbottom <= TBottom && 
+              Rright >= TRight && Rleft <= TLeft)
+                {
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                    changeMyLocation();
+                     
+                }
+            else if(Rtop >= TTop && Rtop <= TBottom && 
+              Rright >= TRight && Rleft <= TLeft)
+                {
+                    changeMyLocation();
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                }
+            else if(Rright >= TLeft && Rright <= TRight && 
+              Rtop <= TTop && Rbottom >= TBottom)
+                {
+                    changeMyLocation();
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                }
+            else if(Rleft >= TLeft && Rleft <= TRight && 
+              Rtop <= TTop && Rbottom >= TBottom)
+                {
+                    score=score+10;
+                    document.getElementById('s').innerHTML="Score:"+score; 
+                    changeMyLocation();
+                    
+                }
+        }
+        function changeMyLocation()
+        {
+            a.style.top = Math.random()*(parseInt(innerHeight)-400) + "px";
+            a.style.left = Math.random()*(parseInt(innerWidth)-600) + "px";
+            checkOverlap();
+        }
+        function start()
+        {
+            timer+=1;
+                document.getElementById('t').innerHTML="Time :"+timer;
+                if(timer==60)
+                    {
+                      document.getElementById('t').innerHTML="Time out"; 
+                        document.getElementById('b1').style.visibility="hidden";
+                        document.getElementById('a').style.visibility="hidden";
+                        document.getElementById('sp').style.visibility="hidden";
+                        clearTimeout(t);
+                    }
+                else{
+                    t=setTimeout(start,1000)
+                }
+        }
+    </script>
+    <style>
+        body{
+            margin: 0;
+        }
+        #b1{
+            margin-left: 1400;
+        }
+        #s{
+            margin-left: 1350; 
+        }
+        #t
+        {
+             margin-left: 1350;
+        }
+        
+    </style>
+</head>
+<body onload="init()" onkeypress="Move(event)">
+    <img src="spong.png" width="300" height="180" id="sp"/>
+    <img src="apple.png" width="160" height="120" id="a"/>
+    <span style="font-size: 40" id="s" class="Score">Score :</span><br>
+    <span style="font-size: 40" id="t" >Timer : </span><br>
+    <button id="b1" onclick="start()"style="font-size: 20">Start</button>
+    <span><a href="page1.html" target="_blank"><button class="b11">Home</button></a></span>
+    <span><a href="page2.html" target="_blank"><button class="b2">Gallery</button></a></span>
+    <span><a href="page3.html" target="_blank"><button class="b3">About</button></a></span>
+    <span><a href="page4.html" target="_self"><button class="b4">Login Form</button></a></span>
+    <span><a href="page5.html" target="_blank"><button class="b5">Quiz</button></a></span>
+    <span><a href="page6.html" target="_blank"><button class="b6">Game</button></a></span>
+</body>
+</html>

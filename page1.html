@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="page1.css">
+  <link rel="icon" href="square1.jpg">
+</head>
+<body>
+    <div class="Greeting" id="greeting"></div>
+    <h2 id="myDateInfo" class="myClock"></h2>
+
+    <button class="button1" id="green" onclick="Green()">Green</button>
+    <button class="button2" id="blue" onclick="Blue()">Blue</button>
+    <button class="button3" id="random" onclick="Random()">Random</button>
+
+<div class="menuButtons">
+    <span><a href="page1.html" target="_self"><button class="b1">Home</button></a></span>
+    <span><a href="page2.html" target="_blank"><button class="b2">Gallery</button></a></span>
+    <span><a href="page3.html" target="_blank"><button class="b3">About</button></a></span>
+    <span><a href="page4.html" target="_blank"><button class="b4">Login Form</button></a></span>
+    <span><a href="page5.html" target="_blank"><button class="b5">Quiz</button></a></span>
+    <span><a href="page6.html" target="_blank"><button class="b6">Game</button></a></span>
+</div>
+
+    <img id="myimg" src="square1.jpg" class="image">
+    <script>
+      //Date
+            var myd=new Date();
+            var h=myd.getHours();
+            var m=myd.getMinutes();
+            var s=myd.getSeconds();
+        digitalClock();
+        function digitalClock()
+        {
+            var myd=new Date();
+            var h=myd.getHours();
+            var m=myd.getMinutes();
+            var s=myd.getSeconds();
+            document.getElementById("myDateInfo").innerHTML=h+":"+m+":"+s;
+            setTimeout(digitalClock,1000);
+        }
+
+        
+
+//Greeting
+     alert("Welcome");
+     var name=prompt("What is your name?");
+     while(name=="null" || name.length==0)
+     {
+        name=prompt("What is your name?");
+     }
+    
+     if( h>6 && h<12)
+            {
+                document.getElementById("greeting").innerHTML="Good Morning "+name;
+            }
+        else if( h>12 && h<18)
+            {
+                document.getElementById("greeting").innerHTML="Good Afternoon"+name;            }
+        else
+            {
+                document.getElementById("greeting").innerHTML="Good Evening "+name;            }
+
+//coloring background
+function Green()
+{
+ document.body.style.backgroundColor="green";
+}
+function Blue()
+{
+ document.body.style.backgroundColor="blue";
+}
+function Random()
+{
+    var a=parseInt(Math.random()*255);
+    var b=parseInt(Math.random()*255);
+    var c=parseInt(Math.random()*255);
+    document.body.style.backgroundColor="rgb("+a+","+b+","+c+")";
+}
+
+//pictures
+var pictures =["square1.jpg","square2.jpg","square3.png","square4.png","square5.jpg"];
+            var x=document.getElementById("myimg");
+            var i=0;
+            function showPictures()
+            {
+                x.src=pictures[i];
+                if(i<pictures.length-1)
+                    {
+                        i++;
+                    }
+                else
+                {
+                    i=0;   
+                }
+            }
+            setInterval(showPictures,3000)
+    </script>
+
+
+
+</body>
+</html>
